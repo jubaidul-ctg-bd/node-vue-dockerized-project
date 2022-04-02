@@ -1,33 +1,35 @@
 version: "3"
 services:
   server:
-    build: 
+    build:
       context: ./server
       dockerfile: Dockerfile
-    ports: 
-     - "8080:8080"
-     - "4040:4040"
+    ports:
+      - "8080:8080"
+      - "4040:4040"
     volumes:
-     - ./server:/app
-     - /app/node_modules
-    networks: 
-     - app-network
+      - ./server:/app
+      - /app/node_modules
+    networks:
+      - app-network
+    command: npm start
 
 
   client:
     build:
       context: ./client
       dockerfile: Dockerfile
-    ports: 
-     - "3000:3000"
-    volumes: 
-     - ./client:/app
-     - /app/node_modules
-    depends_on: 
-     - server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - server
+    command: npm run dev
 
-volumes: 
+volumes:
   app_db_volume:
 
-networks: 
+networks:
   app-network:

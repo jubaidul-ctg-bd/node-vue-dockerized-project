@@ -33,7 +33,7 @@ const socketServer = (app) =>{
                 user: socket.handshake.user
             }
             let response = await productService.bidProduct(req)
-            socket.emit('prodStatus', response);
+            socket.emit('prodStatus|'+ data.productId, response);
         });
     });
 };
