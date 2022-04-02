@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ea0add-72aa-429d-acab-f13b2c68aab4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server/socket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/test/functions.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/test/functions.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648898370614</updated>
       <workItem from="1648898371866" duration="4810000" />
+      <workItem from="1648904328503" duration="1279000" />
     </task>
     <servers />
   </component>
