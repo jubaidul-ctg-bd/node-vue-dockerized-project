@@ -28,5 +28,5 @@ or <br />
 email: jubaidul@gmail.com<br />
 password: 123456
 
-## Api collections are added with the project
+## Api postman collections are added with the project
 fileName: Bid System.postman_collection.json
