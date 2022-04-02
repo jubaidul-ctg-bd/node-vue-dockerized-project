@@ -87,9 +87,20 @@ if (!socket.value) {
 socket.value.on('prodStatus|' + product.value.productId, res => {
     console.log("res.Resp.data.price", res.Resp.data.price, product.value.price)
     if (res.Resp.Error) {
-        toaster.error(res.Resp.message)
+        // toaster.error(res.Resp.message)
     } else {
         product.value.price = res.Resp.data.price
+        // bidPrice.value = ''
+        // toaster.success(res.Resp.message)
+    }
+})
+
+socket.value.on('logStatus|' + product.value.productId, res => {
+    console.log("res.Resp.data.price", res.Resp.data.price, product.value.price)
+    if (res.Resp.Error) {
+        toaster.error(res.Resp.message)
+    } else {
+        bidPrice.value = ''
         toaster.success(res.Resp.message)
     }
 })

@@ -34,6 +34,7 @@ const socketServer = (app) =>{
             }
             let response = await productService.bidProduct(req)
             io.emit('prodStatus|'+ data.productId, response);
+            socket.emit('logStatus|'+ data.productId, response);
         });
     });
 };
