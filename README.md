@@ -16,7 +16,7 @@ Server Port
 ## For Running the testcases
 ```sh
 cd server
-jest
+npm test
 ```
 
 ## For User Login
