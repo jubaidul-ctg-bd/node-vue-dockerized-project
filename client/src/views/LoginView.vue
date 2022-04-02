@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import SocketioService from "../api/socketioService"
+import { setupSocketConnection } from "../api/socketioService"
 import axios from 'axios';
 import {ref} from "vue";
 import {useRouter} from 'vue-router'
@@ -46,7 +46,7 @@ const handleSubmit = async () => {
             // localStorage.setItem('userId', response.Resp.data.userId)
             // localStorage.setItem('userName', response.Resp.data.userName)
             await router.push('/')
-            SocketioService.setupSocketConnection()
+            setupSocketConnection()
         } catch (error) {
             toaster.error(error)
         }

@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "9aa1415c-2574-47a6-91d8-220c7c41e8e9",
+		"name": "Bid System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "reyad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "reyad",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "reyad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiNmI1MTQzLTM5YmUtNDJjYi05OThmLWQ4OTliNTI1NDRkYiIsImlhdCI6MTY0ODc2MDEzOSwiZXhwIjoxNjQ4NzY3MzM5fQ.ygv2lkm-dyJt06Ntw5gB01eum8Y2XuDkMrXsSEmv7q4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "MD",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "reyad@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/cb6b5143-39be-42cb-998f-d899b52544db",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"cb6b5143-39be-42cb-998f-d899b52544db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/users/67c7979b-dff0-4cd2-94ab-9df017f267ad",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"67c7979b-dff0-4cd2-94ab-9df017f267ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1MmYxZjVhLWNlODktNGQwNS05Y2NjLTNkMjFkNWEyYjJkZiIsImlhdCI6MTY0ODgzNDA5MSwiZXhwIjoxNjQ4ODQxMjkxfQ.gSJS6eigPsuaLz1I0c2fk_H9n9QPdM5EGz-0aUnYGyM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Product 4\", \n    \"imgUrl\": \"\",\n    \"startDateTime\": \"2022-04-01T08:29:40.857+00:00\",\n    \"duration\": 120, \n    \"price\": 100,\n    \"bidingPriceLimit\": 15\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNiNmI1MTQzLTM5YmUtNDJjYi05OThmLWQ4OTliNTI1NDRkYiIsImlhdCI6MTY0ODgxNDU3MywiZXhwIjoxNjQ4ODIxNzczfQ.oqs_W_FAAl6YdURtUrnlt2Bc8euInKVsfkpBb2bwdL8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Product 2\", \n    \"imgUrl\": \"\",\n    \"startDate\": \"2022/04/01\",\n    \"startTime\": \"14:00\",\n    \"duration\": 120, \n    \"price\": 200,\n    \"bidingPriceLimit\": 15,\n    \"lastBidder\": \"\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
