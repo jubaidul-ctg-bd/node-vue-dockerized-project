@@ -1,0 +1,12 @@
+port: 8080
+port2: 5050
+db:
+    mongodb:
+        -   enabled: true
+            host: IZyzfMAnlI5s3l2G:IZyzfMAnlI5s3l2G@cluster0.k6qod.mongodb.net
+            port: 27017
+            username: IZyzfMAnlI5s3l2G
+            password: IZyzfMAnlI5s3l2G
+            database: demo
+            nameconn: connMongo
+            lang: ES
